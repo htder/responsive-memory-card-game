@@ -1,3 +1,4 @@
+import "./DifficultlyModal.css";
 function DifficultlyModel(props) {
   return <div 
     onClick={() => props.setOpen(false)}

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from "./components/Header"
 import Card from "./components/Card"
+import RulesModal from "./components/RulesModal"
+import DifficultlyModal from "./components/DifficultlyModal";
 import COLOURS from "./data.json"
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
   const [difficulty, setDifficulty] = useState("easy");
   const [choices, setChoices] = useState([]);
   const [cards, setCards] = useState(createColourCards());
+  const [rulesOpen, setRulesOpen] = useState(false);
+  const [difficultyOpen, setDifficultyOpen] = useState(false);
 
   useEffect(() => {
     setCards(createColourCards());
@@ -123,6 +127,7 @@ function App() {
   }
 
   function playAgain() {
+    console.log("play again")
     setScores(prevScores => ({
       hasWon: false,
       currentScore: 0,
@@ -141,20 +146,28 @@ function App() {
   });
 
   return (
+    <div>
+    {
+      rulesOpen &&
+      <RulesModal setOpen = {setRulesOpen}></RulesModal>
+    }
+    {
+      difficultyOpen && 
+      <DifficultlyModal setOpen = {setDifficultyOpen}></DifficultlyModal>
+    }
     <div className="container">
       <Header
         currentScore = {scores.currentScore}
         highScore = {scores.highScore}
+        playAgain = {playAgain}
+        rulesOpen = {setRulesOpen}
+        difficultyOpen = {setDifficultyOpen}
       />
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-lg-4 row-cols-xl-5'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {renderCards}
       </div>
     </div>
+  </div>
   );
 }
 

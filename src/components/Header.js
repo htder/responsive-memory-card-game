@@ -22,6 +22,7 @@ function Header(props) {
           </button>
           <button 
             type="button"
+            onClick={() => props.difficultyOpen(true)}
             className="btn btn-outline-primary me-2">
             Change Difficulty
           </button>
