@@ -1,0 +1,92 @@
+{
+  "colours": {
+    "Maroon": {
+      "name":"Maroon",
+      "hex":"#800000"
+    },
+    "Brown": {
+      "name":"Brown",
+      "hex":"#9A6324"
+    },
+    "Olive": {
+      "name":"Olive",
+      "hex":"#808000"
+    },
+    "Teal": {
+      "name":"Teal",
+      "hex":"#469990"
+    },
+    "Navy": {
+      "name":"Navy",
+      "hex":"#000075"
+    },
+    "Black": {
+      "name":"Black",
+      "hex":"#000000"
+    },
+    "Red": {
+      "name":"Red",
+      "hex":"#E6194B"
+    },
+    "Orange": {
+      "name":"Orange",
+      "hex":"#F58231"
+    },
+    "Yellow": {
+      "name":"Yellow",
+      "hex":"#FFE119"
+    },
+    "Lime": {
+      "name":"Lime",
+      "hex":"#BFEF45"
+    },
+    "Green": {
+      "name":"Green",
+      "hex":"#3CB44B"
+    },
+    "Cyan": {
+      "name":"Cyan",
+      "hex":"#42D4F4"
+    },
+    "Blue": {
+      "name":"Blue",
+      "hex":"#4363D8"
+    },
+    "Purple": {
+      "name":"Purple",
+      "hex":"#911EB4"
+    },
+    "Magenta": {
+      "name":"Magenta",
+      "hex":"#F032E6"
+    },
+    "Grey": {
+      "name":"Grey",
+      "hex":"#A9A9A9"
+    },
+    "Pink": {
+      "name":"Pink",
+      "hex":"#FABED4"
+    },
+    "Apricot": {
+      "name":"Apricot",
+      "hex":"#FFD8B1"
+    },
+    "Beige": {
+      "name":"Beige",
+      "hex":"#FFFAC8"
+    },
+    "Mint": {
+      "name":"Mint",
+      "hex":"#AAFFC3"
+    },
+    "Lavender": {
+      "name":"Lavender",
+      "hex":"#DCBEFF"
+    },
+    "White": {
+      "name":"White",
+      "hex":"#FFFFFF"
+    }
+  }
+}
