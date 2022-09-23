@@ -2,7 +2,7 @@ import "./RulesModal.css";
 function RulesModal(props) {
   return <div 
     onClick={() => props.setOpen(false)}
-    className="modal modal-sheet d-block bg-light py-5"  role="dialog" id="modalSheet"
+    className="modal d-block bg-light py-5" role="dialog" id="modalSheet"
     >
       <div className="modal-dialog" role="document">
         <div className="modal-content rounded-4 shadow">
