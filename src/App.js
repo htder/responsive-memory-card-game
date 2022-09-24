@@ -3,7 +3,8 @@ import './App.css';
 import Header from "./components/Header"
 import Card from "./components/Card"
 import RulesModal from "./components/RulesModal"
-import DifficultlyModal from "./components/DifficultlyModal";
+import DifficultyModal from "./components/DifficultyModal";
+import PlayAgainModal from "./components/PlayAgainModal";
 import COLOURS from "./data.json"
 
 function App() {
@@ -127,13 +128,14 @@ function App() {
     }
   }
 
-  function playAgain() {
-    console.log("play again")
+  function playAgain(difficulty) {
+    setDifficulty(difficulty);
     setScores(prevScores => ({
       hasWon: false,
       currentScore: 0,
       highScore: prevScores.highScore
     }))
+    setCards(createColourCards())
     setChoices([]);
   }
 
@@ -166,23 +168,30 @@ function App() {
     }
     {
       difficultyOpen && 
-      <DifficultlyModal 
+      <DifficultyModal 
           setOpen = {setDifficultyOpen}
           handleClick = {handleClickDiff}
-      ></DifficultlyModal>
+      ></DifficultyModal>
     }
-    <div className="container">
-      <Header
-        currentScore = {scores.currentScore}
-        highScore = {scores.highScore}
-        playAgain = {playAgain}
-        rulesOpen = {setRulesOpen}
-        difficultyOpen = {setDifficultyOpen}
-        reset = {reset}
-      />
-      <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-lg-4 row-cols-xl-5'>
-        {renderCards}
-      </div>
+    {
+      scores.hasWon &&
+      <PlayAgainModal
+        handleClick = {playAgain}
+        difficulty = {difficulty}
+      ></PlayAgainModal>
+    }
+      <div className="container">
+        <Header
+          currentScore = {scores.currentScore}
+          highScore = {scores.highScore}
+          playAgain = {playAgain}
+          rulesOpen = {setRulesOpen}
+          difficultyOpen = {setDifficultyOpen}
+          reset = {reset}
+        />
+        <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-lg-4 row-cols-xl-5'>
+          {renderCards}
+        </div>
     </div>
   </div>
   );
