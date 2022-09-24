@@ -102,7 +102,8 @@ function App() {
       hasWon: false,
       highScore: prevScores.highScore,
       currentScore: 0
-    }))
+    }));
+    console.log(level);
   }
 
   function changeScore(correct) {
@@ -149,11 +150,16 @@ function App() {
     <div>
     {
       rulesOpen &&
-      <RulesModal setOpen = {setRulesOpen}></RulesModal>
+      <RulesModal 
+          setOpen = {setRulesOpen}
+      ></RulesModal>
     }
     {
       difficultyOpen && 
-      <DifficultlyModal setOpen = {setDifficultyOpen}></DifficultlyModal>
+      <DifficultlyModal 
+          setOpen = {setDifficultyOpen}
+          handleClick = {handleClickDiff}
+      ></DifficultlyModal>
     }
     <div className="container">
       <Header
