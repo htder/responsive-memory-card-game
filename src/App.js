@@ -129,7 +129,6 @@ function App() {
   }
 
   function playAgain(difficulty) {
-    setDifficulty(difficulty);
     setScores(prevScores => ({
       hasWon: false,
       currentScore: 0,
@@ -137,6 +136,7 @@ function App() {
     }))
     setCards(createColourCards())
     setChoices([]);
+    setDifficulty(difficulty);
   }
 
   function reset() {
