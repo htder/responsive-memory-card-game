@@ -1,10 +1,11 @@
+import "./Card.css";
 function Card(props) {
   return ( 
     <div 
       className="col mb-4"
       onClick={props.handleCardClick}
     >
-      <div className="card">
+      <div className="card pointer">
         <div className="card-body" style={{backgroundColor: props.color}}>
           <p 
             className="hide-text"
