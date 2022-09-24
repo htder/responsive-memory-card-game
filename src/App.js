@@ -137,6 +137,16 @@ function App() {
     setChoices([]);
   }
 
+  function reset() {
+    setScores({
+      hasWon: false,
+      currentScore: 0,
+      highScore: 0
+    });
+    setChoices([]);
+    setCards(createColourCards())
+  }
+
   const renderCards = cards.map(color => {
     return <Card 
               color={color.hex}
@@ -168,6 +178,7 @@ function App() {
         playAgain = {playAgain}
         rulesOpen = {setRulesOpen}
         difficultyOpen = {setDifficultyOpen}
+        reset = {reset}
       />
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 rows-cols-lg-4 row-cols-xl-5'>
         {renderCards}

@@ -29,7 +29,7 @@ function Header(props) {
           <button
             type="button"
             className="btn btn-outline-primary me-2"
-            onClick={props.playAgain}
+            onClick={props.reset}
           >Reset
           </button>
         </div>
