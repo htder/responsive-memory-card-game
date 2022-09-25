@@ -13,8 +13,8 @@ The goal of this project was to create a colour memory game with a responsive de
 
 ## Run Locally
 To download this repository and run the project locally.
-* git clone git@github.com:htder/responsive-memory-card-game.git
-* cd responsive-memory-card-game
-* npm install
-* npm start
+* `git clone git@github.com:htder/responsive-memory-card-game.git`
+* `cd responsive-memory-card-game`
+* `npm install`
+* `npm start`
 * open http://localhost:3000 to view locally
