@@ -98,13 +98,13 @@ function App() {
   }
 
   function handleClickDiff(level) {
+    setDifficultyOpen(false);
     setDifficulty(level);
     setScores(prevScores => ({
       hasWon: false,
       highScore: prevScores.highScore,
       currentScore: 0
     }));
-    console.log(level);
   }
 
   function changeScore(correct) {
